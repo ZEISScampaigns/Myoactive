@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GLH7PNGPH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GLH7PNGPH9');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Página web MyoActive myopia</title>
@@ -72,9 +80,10 @@
   .pillar h3 { color: var(--ink); font-size: 19px; margin: 0 0 12px; font-weight: 700; }
   .pillar p { margin: 0; color: var(--muted); font-size: 15px; }
   @media (min-width: 1360px) {
-    .pillars { width: min(1376px, calc(100vw - 64px)); margin-left: calc(50% - min(1376px, calc(100vw - 64px)) / 2); gap: 24px; }
-    .pillar h3, .pillar .l { white-space: nowrap; }
-    .pillar .l { display: block; }
+    .pillars { --w: min(1500px, calc(100vw - 48px)); width: var(--w); margin-left: calc(50% - var(--w) / 2); gap: 24px; }
+    .pillar h3 { white-space: nowrap; font-size: min(19px, calc((var(--w) - 48px) / 3 / 26)); }
+    .pillar p { font-size: min(15px, calc((var(--w) - 48px) / 3 / 34.5)); }
+    .pillar .l { display: block; white-space: nowrap; }
   }
 
   /* Stats */
