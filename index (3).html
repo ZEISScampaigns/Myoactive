@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GLH7PNGPH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GLH7PNGPH9');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página web MyoActive myopia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #22262c;
+    --text: #4a515a;
+    --muted: #5f6670;
+    --line: #d9dde3;
+    --blue: #0066d9;
+    --blue-hover: #0052b0;
+    --deep: #1a2fb0;
+    --bg: #ffffff;
+    --soft: #f3f5f9;
+    --max: 1280px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Noto Sans", system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: var(--blue); }
+  sup { font-size: .6em; line-height: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+  .btn { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 13px 30px; border: 0; border-radius: 2px; cursor: pointer; font-family: inherit; transition: background .15s; }
+  .btn:hover { background: var(--blue-hover); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #ffb020; outline-offset: 2px; }
+
+  /* Top bar */
+  .topbar { background: #fff; border-bottom: 1px solid var(--line); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+  .brand-logo { width: 40px; height: 40px; }
+  .brand-name { font-size: 14px; color: var(--muted); }
+  .topbar nav a { color: var(--ink); text-decoration: none; font-size: 14px; margin-left: 28px; }
+  .topbar nav a:hover { color: var(--blue); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: #fff; background: linear-gradient(170deg, #6f7fd0 0%, #5a78e4 38%, #1f4bd6 68%, #0a2aa8 100%); min-height: 620px; display: flex; align-items: center; }
+  .hero-img { position: absolute; top: 0; right: 0; height: 100%; width: 62%; object-fit: cover; object-position: left center; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 28%); mask-image: linear-gradient(90deg, transparent 0%, #000 28%); }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,40,150,.35) 0%, rgba(20,40,150,.15) 45%, transparent 65%); z-index: 1; }
+  .hero .wrap { position: relative; z-index: 2; width: 100%; padding-top: 80px; padding-bottom: 80px; }
+  .hero-copy { max-width: 620px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 10px; }
+  .hero h1 { margin: 0; font-size: clamp(36px, 5vw, 52px); line-height: 1.1; font-weight: 800; letter-spacing: -.01em; }
+  .hero h1 span { display: block; font-weight: 300; margin-top: 6px; }
+  .hero p.lead { font-size: 18px; line-height: 1.6; margin: 28px 0 32px; text-shadow: 0 1px 12px rgba(10,30,120,.35); }
+  .hero p.lead strong { font-weight: 700; }
+
+  /* Sub nav */
+  .subnav { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
+  .subnav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; flex-wrap: wrap; }
+  .subnav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; flex-wrap: wrap; }
+  .subnav ul a { display: block; color: var(--ink); text-decoration: none; font-size: 15px; padding: 24px 0 22px; border-bottom: 2px solid transparent; }
+  .subnav ul a:hover { color: var(--blue); }
+  .subnav ul a.active { border-bottom-color: #0d2a8a; }
+
+  section { scroll-margin-top: 80px; }
+  .section { padding: 96px 0; }
+  .center { text-align: center; }
+  h2 { color: var(--ink); font-size: clamp(28px, 3.2vw, 36px); line-height: 1.2; margin: 0 0 16px; font-weight: 700; }
+  .intro { max-width: 900px; margin: 0 auto; font-size: 16px; color: var(--muted); }
+
+  /* Approach */
+  .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-top: 56px; }
+  .pillar img { width: 100%; max-width: 340px; aspect-ratio: 1; border-radius: 50%; margin: 0 auto 28px; object-fit: cover; clip-path: circle(49.5%); }
+  .pillar h3 { color: var(--ink); font-size: 19px; margin: 0 0 12px; font-weight: 700; }
+  .pillar p { margin: 0; color: var(--muted); font-size: 15px; }
+  @media (min-width: 1360px) {
+    .pillars { --w: min(1500px, calc(100vw - 48px)); width: var(--w); margin-left: calc(50% - var(--w) / 2); gap: 24px; }
+    .pillar h3 { white-space: nowrap; font-size: min(19px, calc((var(--w) - 48px) / 3 / 26)); }
+    .pillar p { font-size: min(15px, calc((var(--w) - 48px) / 3 / 34.5)); }
+    .pillar .l { display: block; white-space: nowrap; }
+  }
+
+  /* Stats */
+  .stats { background: var(--soft); }
+  .stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 48px; }
+  .stat-num { font-size: clamp(64px, 9vw, 104px); font-weight: 800; color: var(--deep); line-height: 1; letter-spacing: -.02em; }
+  .stat-label { margin-top: 18px; color: var(--muted); font-size: 15px; }
+
+  /* MOVE */
+  .move-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; margin-top: 48px; }
+  .move-media { position: relative; aspect-ratio: 1; overflow: hidden; background: #c9d2f2; }
+  .move-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s ease; }
+  .move-media img.on { opacity: 1; }
+  .acc { list-style: none; margin: 0; padding: 0; }
+  .acc li { border-left: 2px solid var(--line); transition: border-color .2s; }
+  .acc li.open { border-left-color: var(--ink); }
+  .acc button { all: unset; box-sizing: border-box; display: block; width: 100%; cursor: pointer; padding: 12px 0 12px 22px; font-size: 17px; color: var(--ink); }
+  .acc button:hover { color: var(--blue); }
+  .acc button:focus-visible { outline: 3px solid #ffb020; outline-offset: -3px; }
+  .acc li.open button { font-weight: 700; }
+  .acc .panel { display: none; padding: 0 0 16px 22px; font-size: 14px; color: var(--muted); }
+  .acc li.open .panel { display: block; }
+  .acc .panel p { margin: 0 0 8px; }
+  .acc .panel strong { color: var(--ink); }
+
+  /* Wearers */
+  .wear-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+  .wear-grid h2 span { display: block; font-weight: 300; }
+  .wear-grid ul { margin: 28px 0 0; padding: 0 0 0 20px; }
+  .wear-grid li { margin-bottom: 12px; color: var(--muted); }
+  .wear-grid li::marker { color: var(--ink); }
+  .wear-grid li strong { color: var(--ink); }
+  .wear-img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: 2fr 1fr; gap: 6px; }
+  .card { position: relative; display: block; min-height: 340px; overflow: hidden; color: #fff; text-decoration: none; background: #333; }
+  .card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; transition: transform .6s ease; }
+  .cards .card:first-child { aspect-ratio: 956 / 465; min-height: 0; }
+  .card:hover img { transform: scale(1.04); }
+  .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 45%); }
+  .card div { position: relative; z-index: 1; padding: 28px 32px; }
+  .card small { display: block; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .card strong { display: block; font-size: 21px; margin-top: 4px; }
+
+  /* Footnotes */
+  .notes { padding: 40px 0 56px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); }
+  .notes ol { margin: 0; padding-left: 18px; }
+  .notes li { margin-bottom: 6px; }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 20px; }
+    .topbar nav { display: none; }
+    .hero { min-height: 0; align-items: flex-end; }
+    .hero-img { width: 100%; height: 55%; top: 0; -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent 100%); mask-image: linear-gradient(180deg, #000 40%, transparent 100%); object-position: center; }
+    .hero::before { background: linear-gradient(180deg, transparent 20%, rgba(10,40,170,.6) 60%); }
+    .hero .wrap { padding-top: 280px; padding-bottom: 48px; }
+    .subnav ul { gap: 20px; }
+    .subnav ul a { padding: 14px 0 12px; font-size: 14px; }
+    .subnav .btn { display: none; }
+    .section { padding: 64px 0; }
+    .pillars, .stat-grid, .move-grid, .wear-grid, .cards { grid-template-columns: minmax(0, 1fr); }
+    .pillars { gap: 48px; }
+    .move-grid, .wear-grid { gap: 32px; }
+    .card { min-height: 240px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img class="brand-logo" src="zeiss-logo.png" alt="ZEISS" width="40" height="40"><span class="brand-name">Vision Care for Eye Care Professionals</span></a>
+    <nav aria-label="Main">
+      <a href="#approach">Myopia management</a>
+      <a href="#move">Technology</a>
+      <a href="#wearers">Clinical results</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero-img" src="hero-lens.jpg" alt="ZEISS MyoActive lens with M.O.V.E. microstructures">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">ZEISS for Eye Care Professionals</p>
+        <h1 id="hero-title">ZEISS MyoActive lenses <span>Our most effective myopia management lens, ever.</span></h1>
+        <p class="lead" style="margin-bottom: 0;"><strong>Clinical trials confirm: ZEISS MyoActive lenses slow myopia progression by 0.60 D and axial elongation by 0.22 mm.</strong> We studied children's visual behaviour and eye growth, applying these insights to develop ZEISS MyoActive lenses with our patented ZEISS M.O.V.E. technology. The result: <strong>MyoActive lenses demonstrate the highest average efficacy in slowing myopia to date.<sup>1</sup></strong></p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page">
+    <div class="wrap">
+      <ul>
+        <li><a href="#approach" data-spy="approach" class="active">A new approach to myopia management</a></li>
+        <li><a href="#move" data-spy="move">ZEISS M.O.V.E. technology</a></li>
+        <li><a href="#wearers" data-spy="wearers">What wearers say</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="approach" class="section center" aria-labelledby="approach-title">
+    <div class="wrap">
+      <h2 id="approach-title">We're reinventing myopia management.</h2>
+      <p class="intro">We developed ZEISS MyoActive lenses based on proven principles and fundamental new insights from recent myopia research. This new approach represents a real breakthrough in myopia management, with ZEISS being the first to translate Dynamic Signal Theory into lens design.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <img src="kid-circle.jpg" alt="Child wearing glasses while doing schoolwork">
+          <h3>We looked at how kids actually see.</h3>
+          <p><span class="l">Every day, children see so many visual patterns at different distances </span><span class="l">and in all kinds of lighting conditions. The demands on their vision </span><span class="l">are always changing.</span></p>
+        </article>
+        <article class="pillar">
+          <img src="defocus.jpg" alt="Illustration of light passing through a lens creating myopic defocus">
+          <h3>Applied simultaneous competing defocus theory.</h3>
+          <p><span class="l">Research shows that creating myopic defocus triggers a retinal signal </span><span class="l">in the child's eye that can slow eye growth, the main cause of </span><span class="l">myopia progression in children.</span></p>
+        </article>
+        <article class="pillar">
+          <img src="signal.jpg" alt="Illustration of dynamic signals from lens microstructures reaching the retina">
+          <h3>Dynamic Signal Theory for lasting impact.</h3>
+          <p><span class="l">Adding dynamic signals from non-repetitive microstructures to </span><span class="l">myopic defocus helps retain the retinal response, for effective </span><span class="l">treatment outcomes that last longer.</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stats center" aria-labelledby="stats-title">
+    <div class="wrap">
+      <h2 id="stats-title">Highest average efficacy reported to date.<sup>1</sup></h2>
+      <div class="stat-grid">
+        <div>
+          <div class="stat-num">0.60 D</div>
+          <p class="stat-label">slower myopia progression with ZEISS MyoActive lenses.<sup>1</sup></p>
+        </div>
+        <div>
+          <div class="stat-num">0.22 mm</div>
+          <p class="stat-label">reduction in axial elongation thanks to ZEISS MyoActive lenses.<sup>1</sup></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="move" class="section" aria-labelledby="move-title">
+    <div class="wrap">
+      <h2 id="move-title" class="center">ZEISS M.O.V.E. technology in MyoActive lenses</h2>
+      <div class="move-grid">
+        <div class="move-media">
+          <img class="on" data-step="0" src="move-1.jpg" alt="ZEISS MyoActive lens showing concentric rings of microstructures">
+          <img data-step="1" src="move-2.jpg" alt="Close-up of micro-optical elements with different positive powers">
+          <img data-step="2" src="move-3.jpg" alt="Non-aligned microstructure layout across the lens surface">
+          <img data-step="3" src="move-4.jpg" alt="Light passing through the lens creating dynamic retinal signals">
+        </div>
+        <ul class="acc">
+          <li class="open">
+            <button type="button" aria-expanded="true" aria-controls="p0" data-step="0">A closer look at M.O.V.E.<sup>TM</sup> technology.</button>
+            <div class="panel" id="p0"><p>We explored how today's visual demands affect refractive development and the effectiveness of myopia treatments. These findings contributed to ZEISS MyoActive: the first lens design to incorporate Dynamic Signal Theory through M.O.V.E.<sup>TM</sup> (Micro Optical Variable Elements) technology. We developed ZEISS MyoActive to correct and control myopia in children over the long run.</p></div>
+          </li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="p1" data-step="1">Multiple defocus powers.</button>
+            <div class="panel" id="p1"><p>Microstructures with different positive powers create varying levels of myopic defocus, creating a variety of different retinal signals.</p></div>
+          </li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="p2" data-step="2">Non-repetitive microstructure layout.</button>
+            <div class="panel" id="p2"><p>The non-aligned microstructure layout allows for changing retinal signals as the child's eye naturally moves across the lens. This helps avoid repetitive stimulation.</p></div>
+          </li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="p3" data-step="3">Creating dynamic visual signals for lasting results.</button>
+            <div class="panel" id="p3"><p>The microstructure power ranges and layout pattern enable varying levels of myopic defocus. The resulting dynamic retinal signals help slow axial elongation, sustaining retinal responsiveness.</p><p><strong>The result: ZEISS MyoActive is the lens design with the highest average efficacy to date.<sup>1</sup></strong></p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="wearers" class="section" aria-labelledby="wear-title" style="padding-top: 24px;">
+    <div class="wrap wear-grid">
+      <div>
+        <h2 id="wear-title">Wearing them matters. <span>Crafted for all-day comfort.</span></h2>
+        <p>Myopia management lenses make the greatest impact on children's vision when effective in lens design AND worn throughout the day. And ZEISS MyoActive lens wearers approve:</p>
+        <ul>
+          <li><strong>100%</strong> of children show emmetropic-like eye growth.<sup>1</sup></li>
+          <li><strong>98%</strong> of children fully adapt to MyoActive lenses within a week.<sup>1</sup></li>
+          <li><strong>93%</strong> of children claim that their distance vision is very good.<sup>1,2</sup></li>
+          <li><strong>93%</strong> of children rated their near vision as good or very good.<sup>1,2</sup></li>
+        </ul>
+      </div>
+      <img class="wear-img" src="wearer.jpg" alt="Smiling child wearing ZEISS MyoActive glasses">
+    </div>
+  </section>
+
+  <section class="section" aria-label="More from ZEISS myopia management" style="padding-top: 0;">
+    <div class="wrap cards">
+      <a class="card" href="#">
+        <img src="card-collective.jpg" alt="">
+        <div><small>Manage myopia with ZEISS</small><strong>ZEISS Myopia Management Collective</strong></div>
+      </a>
+      <a class="card" href="#">
+        <img src="card-myocare.jpg" alt="">
+        <div><small>Other solutions</small><strong>ZEISS MyoCare lens portfolio</strong></div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="notes">
+  <div class="wrap">
+    <ol>
+      <li>Two-year prospective, multi-center, double-blind, randomized controlled clinical trial (NCT06563700) by Shanghai Eye Disease Prevention and Treatment Center, China, 2025. Myopic children aged 7-13 years wearing ZEISS MyoActive (N=56) and myopic children aged 7-13 years wearing ZEISS Single Vision Rx lenses (N=56), one-year results as of July 2026, data on file.</li>
+      <li>At dispensing.</li>
+    </ol>
+  </div>
+</footer>
+
+<script>
+  // M.O.V.E. accordion: one panel open, image follows
+  var buttons = document.querySelectorAll('.acc button');
+  var imgs = document.querySelectorAll('.move-media img');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var step = b.getAttribute('data-step');
+      buttons.forEach(function (o) {
+        var on = o === b;
+        o.setAttribute('aria-expanded', on ? 'true' : 'false');
+        o.parentElement.classList.toggle('open', on);
+      });
+      imgs.forEach(function (i) { i.classList.toggle('on', i.getAttribute('data-step') === step); });
+    });
+  });
+
+  // Sub nav highlight on scroll
+  var links = document.querySelectorAll('.subnav [data-spy]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('data-spy') === e.target.id); });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ['approach', 'move', 'wearers'].forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+</script>
+</body>
+</html>
